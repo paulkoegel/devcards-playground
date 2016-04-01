@@ -1,1 +1,20 @@
 lein cljsbuild once prod
+
+development:
++ start IntelliJ, open REPL with `ctrl+r`
++ open `http://localhost:3449/dev.html` (index.html is only for production)
++ evalualte current line in IntelliJ with: `command + shift + p` (or whatever you configured under: preferences -> keymap -> search for "Send top form to REPL")
+
+
+### Keyboard Shortcut to run current line in REPL
++ start REPL with `ctrl + r`
++ `command + shift + p` (or whatever you configured under: preferences -> keymap -> search for "Send top form to REPL")
+
+### Set up REPL
++ [https://cursive-ide.com/userguide/repl.html]
+
+#### Connect Figwheel with Cursive REPL
++ instructions: [https://github.com/bhauman/lein-figwheel/wiki/Running-figwheel-in-a-Cursive-Clojure-REPL](https://github.com/bhauman/lein-figwheel/wiki/Running-figwheel-in-a-Cursive-Clojure-REPL)
+
+### Devcards - show source:
+https://github.com/bhauman/devcards/blob/master/example_src/devdemos/source_code_display.cljs
