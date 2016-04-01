@@ -27,11 +27,11 @@
   :clean-targets ^{:protect false} ["resources/public/js/compiled"
                                     "target"]
   
-  :source-paths ["src" "script"]
+  :source-paths ["src"]
 
   :cljsbuild {
               :builds [{:id "devcards"
-                        :source-paths ["src"]
+                        :source-paths ["src" "script"]
                         :figwheel { :devcards true } ;; <- note this
                         :compiler { :main       "devcards-playground.core"
                                     :asset-path "js/compiled/devcards_out"
@@ -39,7 +39,7 @@
                                     :output-dir "resources/public/js/compiled/devcards_out"
                                     :source-map-timestamp true }}
                        {:id "dev"
-                        :source-paths ["src"]
+                        :source-paths ["src" "script"]
                         :figwheel true
                         :compiler {:main       "devcards-playground.core"
                                    :asset-path "js/compiled/out"
@@ -50,7 +50,7 @@
                         :source-paths ["src"]
                         :compiler {:main       "devcards-playground.core"
                                    :asset-path "js/compiled/out"
-                                   :output-to  "resources/public/js/compiled/devcards_playground.js"
+                                   :output-to  "resources/public/js/compiled/devcards_playground_prod.js"
                                    :optimizations :advanced}}]}
 
   :figwheel { :css-dirs ["resources/public/css"] })
