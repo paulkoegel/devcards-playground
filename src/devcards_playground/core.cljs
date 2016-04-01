@@ -13,13 +13,12 @@
   [:div
    "The atom " [:code "click-count"] " has value: "
    @click-count ". "
-   [:button {:on-click #(swap! click-count inc)} "Click meaou!"]])
+   [:button {:on-click #(swap! click-count inc)} "Click meaooouuuu!"]])
 
 (defcard reagent-counting-component
          (dc/reagent counting-component)
          click-count
          {:inspect-data true :history true })
-
 
 (defn __ [s1 s2]
   (clojure.set/union
